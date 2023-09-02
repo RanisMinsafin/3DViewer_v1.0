@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1086</width>
+    <height>709</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #00a3e1, stop:1 #b2ceff);
+	color: #fff;
+}
+</string>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="MyOpenGLWidget" name="openGLWidget">
+    <property name="geometry">
+     <rect>
+      <x>239</x>
+      <y>19</y>
+      <width>621</width>
+      <height>591</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>650</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: underline;
+}</string>
+    </property>
+    <property name="text">
+     <string>Имя файла:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="showFileName">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>650</y>
+      <width>161</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+	text-decoration: underline;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>10</y>
+      <width>191</width>
+      <height>641</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="10" column="0">
+      <widget class="QPushButton" name="peakColor">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #7ec2f6;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Цвет вершины</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QComboBox" name="typeOfLine">
+       <property name="styleSheet">
+        <string notr="true">QDoubleSpinBox {
+                  font-size: 20px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Сплошная</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Пунктирная</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Тип линии</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Толщина граней</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0">
+      <widget class="QDoubleSpinBox" name="vertWidth">
+       <property name="styleSheet">
+        <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::PlusMinus</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QDoubleSpinBox" name="facetWidth">
+       <property name="styleSheet">
+        <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::PlusMinus</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_13">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Тип вершины</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="typeOfProjection">
+       <property name="styleSheet">
+        <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Параллельная</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Центральная</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QComboBox" name="typeOfVert">
+       <property name="styleSheet">
+        <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Отсутствует </string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Квадратная</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Круглая</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="12" column="0">
+      <widget class="QPushButton" name="backColor">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #7ec2f6;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Цвет фона</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Размер вершин</string>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QPushButton" name="lineColor">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #7ec2f6;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Цвет линии</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+       </property>
+       <property name="text">
+        <string>Проекция</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="spin_x_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>217</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="spin_x_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>217</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="spin_y_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>255</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="spin_z_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>293</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="spin_y_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>255</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="spin_z_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>293</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shift_z_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>141</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shift_x_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>65</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shift_y_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>103</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shift_z_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>141</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shift_x_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>65</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shift_y_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>188</x>
+      <y>103</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="scale_minus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>368</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #00a3e1;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="scale_plus">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>400</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  white;
+	color: black;
+    border: none;
+	border-radius: 13px;
+
+    text-align: center;
+
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e96172;
+	color: #fff;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="scale_plus_value">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>397</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+
+
+
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>0.100000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>96</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Смещение</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>327</y>
+      <width>82</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Масштаб</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="scale_minus_value">
+    <property name="geometry">
+     <rect>
+      <x>83</x>
+      <y>365</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>0.100000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>446</y>
+      <width>76</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Вершин:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="countOfVerts">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>446</y>
+      <width>111</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>480</y>
+      <width>67</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Граней:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="countOfFacets">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>480</y>
+      <width>111</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>137</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>z</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_19">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>99</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>y</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="y_move_spin">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>100</y>
+      <width>66</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>0.500000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="x_move_spin">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>62</y>
+      <width>66</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+
+
+
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>0.500000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_20">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>61</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="z_move_spin">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>138</y>
+      <width>66</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>0.500000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>213</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="x_rotate_spin">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>214</y>
+      <width>66</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>251</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>y</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="y_rotate_spin">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>252</y>
+      <width>66</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>289</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>z</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="z_rotate_spin">
+    <property name="geometry">
+     <rect>
+      <x>108</x>
+      <y>290</y>
+      <width>66</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QDoubleSpinBox {
+                  font-size: 16px;
+				background-color:  white;
+				color: black;
+            }
+
+
+	
+
+       
+
+</string>
+    </property>
+    <property name="buttonSymbols">
+     <enum>QAbstractSpinBox::PlusMinus</enum>
+    </property>
+    <property name="value">
+     <double>1.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fileSelectButton">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>518</y>
+      <width>201</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  #e96172;
+	color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e73e44;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Выбрать файл</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveAsButton">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>569</y>
+      <width>201</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  #e96172;
+	color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e73e44;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Сохранить скриншот</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="make_gif">
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+      <y>620</y>
+      <width>201</width>
+      <height>37</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    	background-color:  #e96172;
+	color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+QPushButton:hover {
+
+}
+
+QPushButton:pressed {
+    background-color: #e73e44;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Сохранить GIF</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>175</y>
+      <width>92</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	color: #fff;
+	font-size: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Вращение</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1086</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">myopenglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
